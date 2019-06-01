@@ -1,0 +1,11 @@
+.btn-orchid{
+    background-color: #dd66bb;
+    color: white;
+}
+
+.form-control, .btn-purple {
+    background-color: #463f57;
+}
+
+::placeholder { color: white; font-weight: bold}
+
