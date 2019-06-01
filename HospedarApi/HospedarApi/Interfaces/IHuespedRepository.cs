@@ -9,5 +9,7 @@ namespace HospedarApi.Interfaces
     public interface IHuespedRepository
     {
         Task<List<Huesped>> Listar();
+
+        string Ingresar(Huesped huesped);
     }
 }

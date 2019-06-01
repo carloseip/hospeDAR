@@ -6,6 +6,7 @@ using HospedarApi.Interfaces;
 using HospedarApi.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -56,6 +57,19 @@ namespace HospedarApi
 
             app.UseHttpsRedirection();
             app.UseMvc();
+
+            app.Use(async (context, _next) =>
+            {
+
+                if (string.IsNullOrEmpty(context.Request.Path.ToString())
+                        || context.Request.Path.ToString() == "/")
+                {
+                    context.Response.StatusCode = 200;
+                    await context.Response.WriteAsync("La API de HospeDAR se esta ejecutando correctamente.");
+                }
+                else
+                    await _next();
+            });
         }
     }
 }
