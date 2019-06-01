@@ -1,37 +1,53 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-  <div class="container">
-    <a [routerLink]="['/home']" class="navbar-brand">
-      HOSPEDAR
-    </a>
-    <button
-      type="button"
-      class="navbar-toggler"
-      data-toggle="collapse"
-      data-target="#navbarCollapse"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a [routerLink]="['/home']" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item">
-          <a [routerLink]="['/guide']" class="nav-link">Guìa</a>
-        </li>
-        <li class="nav-item">
-          <a [routerLink]="['/angelhost']" class="nav-link">AngelHost</a>
-        </li>
-        <li class="nav-item">
-          <a [routerLink]="['/host']" class="nav-link">Huesped</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">Registrate</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">Iniciar Sesiòn</a>
-        </li>
-      </ul>
+<nav class="navbar navbar-expand-lg ">
+  <a class="navbar-brand" href="#"
+    ><img
+      height="65"
+      src="https://github.com/carloseip/hospeDAR/blob/jonathan/utils/img/logo.jpg?raw=true"
+  /></a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div
+    class="collapse navbar-collapse justify-content-end"
+    id="navbarNavAltMarkup"
+  >
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="#">
+        <dl>
+          <dt class="text-primary">&iquest;Como funciona?</dt>
+          <dd><small>Es simple, conoce m&aacute;s</small></dd>
+        </dl>
+      </a>
+      <a class="nav-item nav-link" href="#">
+        <dl>
+          <dt class="text-primary">AngelHost</dt>
+          <dd><small>&iquest;Buscas hospedaje?</small></dd>
+        </dl>
+      </a>
+      <a class="nav-item nav-link" href="#">
+        <dl>
+          <dt class="text-primary">Hospedados</dt>
+          <dd><small>&iquest;Quieres hospedar?</small></dd>
+        </dl>
+      </a>
+      <a class="nav-item nav-link" href="#">
+        <button type="button" class="btn btn-register">Registrate</button>
+      </a>
+      <a class="nav-item nav-link" href="#">
+        <button type="button" class="btn btn-login">
+          Inicia sesi&oacute;n
+        </button>
+      </a>
     </div>
   </div>
 </nav>
+
+<!-- https://github.com/carloseip/hospeDAR/blob/jonathan/utils/img/logo.jpg?raw=true -->

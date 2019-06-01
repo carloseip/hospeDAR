@@ -1,3 +1,24 @@
-<p>
-  cardhost works!
-</p>
+<div class="card">
+  <img [src]="url" class="card-img-top" />
+  <span class="badge badge-pill badge-primary ml-1" width="30"
+    >2<br />Días</span
+  >
+  <div class="card-body">
+    <h5 class="card-title text-morado">Mariana Gomez</h5>
+    <h6 class="card-subtitle mb-2 text-morado">de Ayacucho</h6>
+    <p class="card-text">
+      <i class="far fa-calendar-alt"></i>
+      <strong>Fecha: 10 Jun a 20 Jun</strong>
+      <br />
+      <i class="far fa-hospital"></i>
+      <strong>Hospital: Maria Auxiliadora</strong> <br /><br />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna
+    </p>
+    <button [routerLink]="['/host']" type="button" class="btn btn-register">
+      OFR&Eacute;CELE HOSPEDAJE
+    </button>
+  </div>
+</div>
+
+<!-- https://github.com/carloseip/hospeDAR/blob/pablo/utils/img%20pablo/hospedante-1.jpg?raw=true -->

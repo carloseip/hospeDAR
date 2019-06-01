@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-cardhost',
@@ -6,10 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cardhost.component.css']
 })
 export class CardhostComponent implements OnInit {
+  @Input() indeximage: number;
+  url = `https://github.com/carloseip/hospeDAR/blob/pablo/utils/img%20pablo/hospedante-1.jpg?raw=true`;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

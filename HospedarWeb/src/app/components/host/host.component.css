@@ -1,0 +1,21 @@
+.modal-body {
+  padding: 0;
+}
+
+.btn-orchid {
+  background-color: #dd66bb;
+  color: white;
+}
+
+.form-control {
+  background-color: #463f57;
+}
+
+.btn-purple {
+  background-color: #5b3989;
+}
+
+::placeholder {
+  color: white;
+  font-weight: bold;
+}

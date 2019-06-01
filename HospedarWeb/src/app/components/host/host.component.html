@@ -1,3 +1,263 @@
-<p>
-  host works!
-</p>
+<div class="row">
+  <div class="flex-container col-md-3">
+    <div class="card border-light col-md-10">
+      <img
+        src="https://github.com/carloseip/hospeDAR/blob/pablo/utils/img%20pablo/hospedante-1.jpg?raw=true"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h2>Mariana Gómez</h2>
+        <h6>De Ayacucho</h6>
+      </div>
+    </div>
+
+    <div class="container col-md-10">
+      <div class="row">
+        <h4>Galería de fotos</h4>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-6" data-toggle="modal" data-target="#modal">
+          <a href="#lightbox" data-slide-to="0"
+            ><img
+              src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+1"
+              class="img-fluid my-3"
+          /></a>
+        </div>
+        <div class="col-md-4 col-sm-6" data-toggle="modal" data-target="#modal">
+          <a href="#lightbox" data-slide-to="1"
+            ><img
+              src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+2"
+              class="img-fluid my-3"
+          /></a>
+        </div>
+        <div class="col-md-4 col-sm-6" data-toggle="modal" data-target="#modal">
+          <a href="#lightbox" data-slide-to="2"
+            ><img
+              src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+3"
+              class="img-fluid my-3"
+          /></a>
+        </div>
+        <div class="col-md-4 col-sm-6" data-toggle="modal" data-target="#modal">
+          <a href="#lightbox" data-slide-to="3"
+            ><img
+              src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+4"
+              class="img-fluid my-3"
+          /></a>
+        </div>
+        <div class="col-md-4 col-sm-6" data-toggle="modal" data-target="#modal">
+          <a href="#lightbox" data-slide-to="4"
+            ><img
+              src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+5"
+              class="img-fluid my-3"
+          /></a>
+        </div>
+        <div class="col-md-4 col-sm-6" data-toggle="modal" data-target="#modal">
+          <a href="#lightbox" data-slide-to="5"
+            ><img
+              src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+6"
+              class="img-fluid my-3"
+          /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="modal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="Lightbox Gallery by Bootstrap 4"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div
+            id="lightbox"
+            class="carousel slide"
+            data-ride="carousel"
+            data-interval="5000"
+            data-keyboard="true"
+          >
+            <ol class="carousel-indicators">
+              <li data-target="#lightbox" data-slide-to="0"></li>
+              <li data-target="#lightbox" data-slide-to="1"></li>
+              <li data-target="#lightbox" data-slide-to="2"></li>
+              <li data-target="#lightbox" data-slide-to="3"></li>
+              <li data-target="#lightbox" data-slide-to="4"></li>
+              <li data-target="#lightbox" data-slide-to="5"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+1"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+
+              <div class="carousel-item">
+                <img
+                  src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+2"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+
+              <div class="carousel-item">
+                <img
+                  src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+3"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+
+              <div class="carousel-item">
+                <img
+                  src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+4"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+
+              <div class="carousel-item">
+                <img
+                  src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+5"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+
+              <div class="carousel-item">
+                <img
+                  src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+6"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#lightbox"
+              role="button"
+              data-slide="prev"
+              ><span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span
+              ><span class="sr-only">Previous</span></a
+            >
+            <a
+              class="carousel-control-next"
+              href="#lightbox"
+              role="button"
+              data-slide="next"
+              ><span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span
+              ><span class="sr-only">Next</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Info huesped -->
+  <div class="flex-container col-md-5">
+    <div class="container col-md-10">
+      <div class="row">
+        <h5 class="font-weight-bold">Descripción</h5>
+      </div>
+      <div class="row">
+        <p class="text-justify">
+          Lorem ipsum dolor sit amet consectetur adipiscing elit gravida,
+          vivamus hac suscipit laoreet urna eget blandit, eu nec aliquet quis in
+          quam semper. Justo vivamus ut gravida sapien mollis ante, scelerisque
+          curae natoque nunc lobortis velit facilisis, eros proin nulla primis
+          tortor. Iaculis dapibus magnis integer condimentum nibh dictum duis
+          ligula ullamcorper quam, maecenas vivamus nam cras arcu hendrerit sed
+          sociosqu.
+        </p>
+      </div>
+    </div>
+    <hr />
+    <div class="container col-md-10">
+      <div class="row">
+        <h5 class="font-weight-bold">Fecha de estadía</h5>
+      </div>
+      <div class="row"></div>
+      <p class="text-justify">
+        Lorem ipsum dolor sit amet consectetur adipiscing elit gravida.
+      </p>
+    </div>
+    <hr />
+    <div class="container col-md-10">
+      <div class="row">
+        <h5 class="font-weight-bold">¿Por qué necesito la ayuda?</h5>
+      </div>
+      <div class="row"></div>
+      <p class="text-justify">
+        Lorem ipsum dolor sit amet consectetur adipiscing elit gravida, vivamus
+        hac suscipit laoreet urna eget blandit, eu nec aliquet quis in quam
+        semper. Justo vivamus ut gravida sapien mollis ante, scelerisque curae
+        natoque nunc lobortis velit facilisis, eros proin nulla primis tortor.
+        Iaculis dapibus magnis integer condimentum nibh dictum duis ligula
+        ullamcorper quam, maecenas vivamus nam cras arcu hendrerit sed sociosqu.
+      </p>
+    </div>
+  </div>
+
+  <!-- Contacto huedped -->
+  <div class="flex-container col-md-4">
+    <div class="card text-center">
+      <div class="card-body">
+        <h4 class="card-title">Falta completar</h4>
+        <h2 class="font-weight-bold">2 Días</h2>
+        <button
+          class="col-10 btn btn-dark btn-orchid font-weight-bold rounded-pill"
+        >
+          Ofrecer hospedaje
+        </button>
+        <div class="card-text">
+          <p>
+            Comparte
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter-square"></i
+            ><i class="fab fa-whatsapp-square"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fa fa-at"></i>
+          </p>
+        </div>
+        <hr />
+        <div>
+          <fieldset>
+            <h5>Déjale un mensaje</h5>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Nombre y apellido"
+              />
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Email" />
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Mensaje" class="form-control"></textarea>
+            </div>
+            <button
+              type="submit"
+              class="col-10 btn btn-dark btn-purple font-weight-bold rounded-pill"
+            >
+              Enviar mensaje
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
