@@ -89,7 +89,7 @@ ipch/
 *.VC.VC.opendb
 
 #Para que la cadena de Conexión no se suba al repositorio de GitHub
-.json
+HospedarApi/appsettings.json
 
 # Visual Studio profiler
 *.psess
