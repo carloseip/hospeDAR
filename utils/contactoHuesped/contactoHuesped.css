@@ -3,8 +3,12 @@
     color: white;
 }
 
-.form-control, .btn-purple {
+.form-control {
     background-color: #463f57;
+}
+
+.btn-purple {
+    background-color: #5b3989;
 }
 
 ::placeholder { color: white; font-weight: bold}
