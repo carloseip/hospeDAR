@@ -29,6 +29,7 @@ namespace HospedarApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IHuespedRepository, HuespedRepository>();
+            services.AddTransient<IDepartamento, DepartamentoRepository>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddMvc();

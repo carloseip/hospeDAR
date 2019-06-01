@@ -201,10 +201,24 @@ AS
 	END
 GO
 
-CREATE PROC AGREGAR_DEPARTAMENTOS
-	@nombre VARCHAR
+CREATE PROC AGREGAR_HOSPEDAJES
+	@id_hospedaje	int,
+	@id_usuario_host	int,
+	@fecha_estadia	date,
+	@id_usuario	int,
+	@disponibilidad	tinyint
 AS
-	INSERT INTO departamentos(nombre) VALUES (@nombre)
+	INSERT INTO hospedaje(id_usuario_host,fecha_estadia,id_usuario,disponibilidad) 
+	VALUES (@id_usuario_host,@fecha_estadia,@id_usuario,@disponibilidad)
+GO
+
+
+
+CREATE PROC AGREGAR_COMODIDADESDET
+	@id_comodidades	int,
+	@id_hospedaje	int
+AS
+	INSERT INTO comodidades_hospedajes(id_comodidades,id_hospedaje) VALUES (@id_comodidades,@id_hospedaje)
 GO
 
 

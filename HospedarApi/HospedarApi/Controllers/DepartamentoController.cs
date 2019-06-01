@@ -4,51 +4,48 @@ using System.Linq;
 using System.Threading.Tasks;
 using HospedarApi.Interfaces;
 using HospedarApi.Models;
-using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HospedarApi.Controllers
 {
     [Route("api/[controller]")]
-    [EnableCors("Politica")]
     [ApiController]
-    public class HuespedController : ControllerBase
+    public class DepartamentoController : ControllerBase
     {
-        private readonly IHuespedRepository _huespedRepo;
+        private readonly IDepartamento _departamentoRepo;
 
-        public HuespedController(IHuespedRepository personaRepo)
+        public DepartamentoController(IDepartamento departamentoRepo)
         {
-            _huespedRepo = personaRepo;
+            _departamentoRepo = departamentoRepo;
         }
 
-        // GET: api/Huesped
+        // GET: api/Departamento
         [HttpGet]
-        public async Task<ActionResult<List<Huesped>>> Get()
+        public async Task<ActionResult<List<Departamento>>> Get()
         {
-            return await _huespedRepo.Listar();
+            return await _departamentoRepo.Listar();
         }
 
-
-        // GET: api/Huesped/5
+        // GET: api/Departamento/5
         [HttpGet("{id}", Name = "Get")]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST: api/Huesped
+        // POST: api/Departamento
         [HttpPost]
-        public string Post([FromBody]Huesped huesped)
+        public string Post([FromBody]Departamento departamento)
         {
             if (ModelState.IsValid)
             {
-                return _huespedRepo.Ingresar(huesped);
+                return _departamentoRepo.Ingresar(departamento);
             }
             return "Error";
         }
 
-        // PUT: api/Huesped/5
+        // PUT: api/Departamento/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
