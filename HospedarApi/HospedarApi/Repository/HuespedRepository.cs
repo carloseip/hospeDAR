@@ -34,7 +34,7 @@ namespace HospedarApi.Repository
             try
             {
                 DynamicParameters parameters = new DynamicParameters();
-                lis = (await conn.QueryAsync<Huesped>("LISTAR_PERSONAS", parameters, commandType: CommandType.StoredProcedure)).ToList();
+                lis = (await conn.QueryAsync<Huesped>("LISTAR_HUESPEDES", parameters, commandType: CommandType.StoredProcedure)).ToList();
             }
             catch (Exception e)
             {

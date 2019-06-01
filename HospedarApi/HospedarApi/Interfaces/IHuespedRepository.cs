@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HospedarApi.Interfaces
 {
-    interface IHuespedRepository
+    public interface IHuespedRepository
     {
         Task<List<Huesped>> Listar();
     }
