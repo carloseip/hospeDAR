@@ -11,11 +11,11 @@ using System.Threading.Tasks;
 
 namespace HospedarApi.Repository
 {
-    public class DepartamentoRepository : IDepartamento
+    public class ComodidadRepository : IComodidadRepository
     {
         private readonly IConfiguration _config;
 
-        public DepartamentoRepository(IConfiguration config)
+        public ComodidadRepository(IConfiguration config)
         {
             _config = config;
         }
@@ -26,15 +26,16 @@ namespace HospedarApi.Repository
                 return new SqlConnection(_config.GetConnectionString("cn"));
             }
         }
-        public string Ingresar(Departamento departamento)
+
+        public string Ingresar(Comodidad comodidad)
         {
             string rpta = "Like";
             IDbConnection conn = Connection;
             try
             {
                 DynamicParameters dp = new DynamicParameters();
-                dp.Add("@nombre", departamento.nombre);
-                conn.Execute("AGREGAR_DEPARTAMENTOS", dp, commandType: CommandType.StoredProcedure);
+                dp.Add("@nombre", comodidad.nombre);
+                conn.Execute("AGREGAR_COMODIDADES", dp, commandType: CommandType.StoredProcedure);
             }
             catch (Exception e)
             {
@@ -48,14 +49,14 @@ namespace HospedarApi.Repository
             return rpta;
         }
 
-        public async Task<List<Departamento>> Listar()
+        public async Task<List<Comodidad>> Listar()
         {
-            List<Departamento> lis = new List<Departamento>();
+            List<Comodidad> lis = new List<Comodidad>();
             IDbConnection conn = Connection;
             try
             {
                 DynamicParameters parameters = new DynamicParameters();
-                lis = (await conn.QueryAsync<Departamento>("LISTAR_DEPARTAMENTOS", parameters, commandType: CommandType.StoredProcedure)).ToList();
+                lis = (await conn.QueryAsync<Comodidad>("LISTAR_COMODIDADES", parameters, commandType: CommandType.StoredProcedure)).ToList();
             }
             catch (Exception e)
             {

@@ -13,42 +13,42 @@ namespace HospedarApi.Controllers
     [Route("api/[controller]")]
     [EnableCors("Politica")]
     [ApiController]
-    public class HuespedController : ControllerBase
+    public class ComodidadController : ControllerBase
     {
-        private readonly IHuespedRepository _huespedRepo;
+        private readonly IComodidadRepository _comodidadRepo;
 
-        public HuespedController(IHuespedRepository personaRepo)
+        public ComodidadController(IComodidadRepository comodidadRepo)
         {
-            _huespedRepo = personaRepo;
+            _comodidadRepo = comodidadRepo;
         }
 
-        // GET: api/Huesped
+        // GET: api/Comodidad
         [HttpGet]
-        public async Task<ActionResult<List<Huesped>>> Get()
+        public async Task<ActionResult<List<Comodidad>>> Get()
         {
-            return await _huespedRepo.Listar();
+            return await _comodidadRepo.Listar();
         }
 
 
-        //// GET: api/Huesped/5
+        //// GET: api/Comodidad/5
         //[HttpGet("{id}", Name = "Get")]
         //public string Get(int id)
         //{
         //    return "value";
         //}
 
-        // POST: api/Huesped
+        // POST: api/Comodidad
         [HttpPost]
-        public string Post([FromBody]Huesped huesped)
+        public string Post([FromBody]Comodidad comodidad)
         {
             if (ModelState.IsValid)
             {
-                return _huespedRepo.Ingresar(huesped);
+                return _comodidadRepo.Ingresar(comodidad);
             }
             return "Error";
         }
 
-        //// PUT: api/Huesped/5
+        //// PUT: api/Comodidad/5
         //[HttpPut("{id}")]
         //public void Put(int id, [FromBody] string value)
         //{

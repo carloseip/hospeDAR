@@ -4,12 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using HospedarApi.Interfaces;
 using HospedarApi.Models;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HospedarApi.Controllers
 {
     [Route("api/[controller]")]
+    [EnableCors("Politica")]
     [ApiController]
     public class DepartamentoController : ControllerBase
     {
@@ -27,12 +29,12 @@ namespace HospedarApi.Controllers
             return await _departamentoRepo.Listar();
         }
 
-        // GET: api/Departamento/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+        //// GET: api/Departamento/5
+        //[HttpGet("{id}", Name = "Get")]
+        //public string Get(int id)
+        //{
+        //    return "value";
+        //}
 
         // POST: api/Departamento
         [HttpPost]
@@ -45,16 +47,16 @@ namespace HospedarApi.Controllers
             return "Error";
         }
 
-        // PUT: api/Departamento/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
+        //// PUT: api/Departamento/5
+        //[HttpPut("{id}")]
+        //public void Put(int id, [FromBody] string value)
+        //{
+        //}
 
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+        //// DELETE: api/ApiWithActions/5
+        //[HttpDelete("{id}")]
+        //public void Delete(int id)
+        //{
+        //}
     }
 }

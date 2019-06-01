@@ -34,7 +34,7 @@ namespace HospedarApi.Repository
             try
             {
                 DynamicParameters dp = new DynamicParameters();
-                dp.Add("@Nombre", huesped.nombre);
+                dp.Add("@nombre", huesped.nombre);
                 dp.Add("@departamento", huesped.departamento);
                 dp.Add("@direccion", huesped.direccion);
                 dp.Add("@edad", huesped.edad);
