@@ -1,0 +1,29 @@
+CREATE DATABASE HOSPEDAR_DB
+GO
+
+USE HOSPEDAR_DB
+GO
+
+CREATE TABLE Huesped(
+	ID			INT IDENTITY,
+	Nombre		VARCHAR(50),
+	Apellidos	VARCHAR(50),
+	DNI			CHAR(8),
+	Contrasenia	VARCHAR(50)
+)
+GO
+
+INSERT INTO Huesped VALUES ('Carlos','Inga','72103394','123')
+INSERT INTO Huesped VALUES ('Pedro','Bazán','98245692','123')
+INSERT INTO Huesped VALUES ('Rosita','Principe','78251690','123')
+INSERT INTO Huesped VALUES ('Juan','Baltazar','25741358','123')
+INSERT INTO Huesped VALUES ('Anita','Cruz','12345678','123')
+GO
+
+CREATE PROC LISTAR_HUESPEDES
+AS
+	BEGIN
+		SELECT ID, Nombre, Apellidos, DNI, Contrasenia FROM Huesped
+	END
+GO
+
