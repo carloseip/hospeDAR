@@ -12,6 +12,8 @@ import { CardangelComponent } from './components/cardangel/cardangel.component';
 import { CardhostComponent } from './components/cardhost/cardhost.component';
 import { RegisterhostComponent } from './components/registerhost/registerhost.component';
 import { RegisterangelComponent } from './components/registerangel/registerangel.component';
+import { HostComponent } from './components/host/host.component';
+import { GuideComponent } from './components/guide/guide.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { RegisterangelComponent } from './components/registerangel/registerangel
     CardangelComponent,
     CardhostComponent,
     RegisterhostComponent,
-    RegisterangelComponent
+    RegisterangelComponent,
+    HostComponent,
+    GuideComponent
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],

@@ -1,3 +1,21 @@
-<p>
-  home works!
-</p>
+<div class="container">
+  <div class="row">
+    <img
+      src="https://github.com/carloseip/hospeDAR/blob/pablo/utils/img%20pablo/slider1.jpg?raw=true"
+      alt="happy"
+      class="img-fluid"
+      alt="Responsive image"
+    />
+  </div>
+  <div class="flex-container">
+    <h3 class="text-center">ultimas solicitudes</h3>
+    <h1 class="text-center">Ayudalos con el hospedaje</h1>
+    <div class="row">
+      <app-cardhost
+        [indeximage]="i"
+        class="col-3 img"
+        *ngFor="let host of hosts; let i = index"
+      ></app-cardhost>
+    </div>
+  </div>
+</div>

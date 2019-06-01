@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-registerhost',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registerhost.component.css']
 })
 export class RegisterhostComponent implements OnInit {
-
-  constructor() { }
+  formulario: FormGroup;
+  constructor() {}
 
   ngOnInit() {
+    this.formulario = new FormGroup({
+      name: new FormControl('user1'),
+      email: new FormControl(''),
+      password: new FormControl('')
+    });
   }
-
 }
