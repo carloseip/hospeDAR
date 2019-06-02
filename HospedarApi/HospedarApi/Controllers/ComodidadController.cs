@@ -28,8 +28,7 @@ namespace HospedarApi.Controllers
         {
             return await _comodidadRepo.Listar();
         }
-
-
+        
         //// GET: api/Comodidad/5
         //[HttpGet("{id}", Name = "Get")]
         //public string Get(int id)
